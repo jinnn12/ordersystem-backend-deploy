@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+  redis:
+    host: xxxxx
+    port: 6379
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://xxxx:3307/ordersystem
+    username: xxx
+    password: yyy
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+    show_sql: true
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+
+cloud:
+  aws:
+    credentials:
+      access-key: xxxxxx
+      secret-key: yyyyyy
+
+    region:
+      static: ap-northeast-2
+    s3:
+      bucket: jinho-bucket
+
+jwt:
+  expirationAt: 1000 #1000? ??
+  #  beyondaccesstokensecretkeybeyondaccesstokensecretkeybeyondaccesstokensecretkey
+  secretKeyAt: xxx
+  expirationRt: 10000 #10000? ??
+  secretKeyRt: yyy
+
+
