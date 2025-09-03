@@ -11,8 +11,8 @@ spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://xxxx:3307/ordersystem
-    username: xxx
-    password: yyy
+    username: root
+    password: 1234
   jpa:
     database: mysql
     database-platform: org.hibernate.dialect.MariaDBDialect
